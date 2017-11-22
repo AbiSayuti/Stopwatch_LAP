@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SnellRoundhand.ttc">
+            <string>SnellRoundhand</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch_Lap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fe3-pC-cxo">
+                                <rect key="frame" x="0.0" y="319" width="375" height="348"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="3vg-No-WqF"/>
+                                    <constraint firstAttribute="width" constant="375" id="Ic2-OD-hxN"/>
+                                </constraints>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 03 : 02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KM-IX-dMZ">
+                                <rect key="frame" x="16" y="97" width="351" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="351" id="KOl-C4-lQI"/>
+                                    <constraint firstAttribute="height" constant="83" id="M3L-8R-4mT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="60"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkO-Qf-KTR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Stopwatch Lap" id="e2L-0C-pvd"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK6-aI-5Zm">
+                                <rect key="frame" x="197" y="181" width="90" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Kmz-dE-j1i"/>
+                                    <constraint firstAttribute="height" constant="81" id="w0a-fY-iDD"/>
+                                </constraints>
+                                <state key="normal" image="Lap.png"/>
+                                <connections>
+                                    <action selector="LapReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6BP-MM-0MZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-aK-qCB">
+                                <rect key="frame" x="71" y="181" width="88" height="81"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="9l8-Le-ioh"/>
+                                    <constraint firstAttribute="width" constant="88" id="nOq-QO-sKS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play-button-6.png"/>
+                                <connections>
+                                    <action selector="StartStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pyj-4M-Qiy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jK6-aI-5Zm" firstAttribute="leading" secondItem="MgF-aK-qCB" secondAttribute="trailing" constant="38" id="03U-EF-CYH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2KM-IX-dMZ" secondAttribute="trailing" constant="8" id="0Yh-N0-fWc"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2xP-LL-YxF"/>
+                            <constraint firstItem="VkO-Qf-KTR" firstAttribute="trailing" secondItem="Fe3-pC-cxo" secondAttribute="trailing" id="4pD-4k-eFc"/>
+                            <constraint firstItem="VkO-Qf-KTR" firstAttribute="leading" secondItem="Fe3-pC-cxo" secondAttribute="leading" id="5TV-Xx-gZU"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="top" secondItem="jK6-aI-5Zm" secondAttribute="bottom" constant="57" id="7Tt-8p-hyf"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="top" secondItem="MgF-aK-qCB" secondAttribute="bottom" constant="57" id="ByC-Za-5BB"/>
+                            <constraint firstItem="MgF-aK-qCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="Cf4-cM-9dU"/>
+                            <constraint firstItem="2KM-IX-dMZ" firstAttribute="top" secondItem="VkO-Qf-KTR" secondAttribute="bottom" constant="53" id="PG3-vP-5X1"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="top" secondItem="MgF-aK-qCB" secondAttribute="bottom" constant="57" id="TwB-fe-TEc"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c0T-ta-kqB"/>
+                            <constraint firstItem="jK6-aI-5Zm" firstAttribute="top" secondItem="2KM-IX-dMZ" secondAttribute="bottom" constant="1" id="cGN-9M-SOk"/>
+                            <constraint firstItem="MgF-aK-qCB" firstAttribute="top" secondItem="2KM-IX-dMZ" secondAttribute="bottom" constant="1" id="cX8-en-0hI"/>
+                            <constraint firstItem="MgF-aK-qCB" firstAttribute="top" secondItem="2KM-IX-dMZ" secondAttribute="bottom" constant="1" id="kj4-o3-Qu3"/>
+                            <constraint firstItem="jK6-aI-5Zm" firstAttribute="leading" secondItem="MgF-aK-qCB" secondAttribute="trailing" constant="38" id="maa-U5-t5g"/>
+                            <constraint firstItem="2KM-IX-dMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qn8-RC-1Dl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jK6-aI-5Zm" secondAttribute="trailing" constant="88" id="tcb-Gr-zOh"/>
+                            <constraint firstItem="Fe3-pC-cxo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wVB-zd-Qxx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="StopWatchLabel" destination="2KM-IX-dMZ" id="MOt-cN-aBi"/>
+                        <outlet property="btnLapReset" destination="jK6-aI-5Zm" id="R3D-t3-qak"/>
+                        <outlet property="btnStartStop" destination="MgF-aK-qCB" id="kpw-PT-Ybc"/>
+                        <outlet property="lapTableView" destination="Fe3-pC-cxo" id="FD8-FI-mOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="110.19490254872565"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Lsh-xC-OgW">
+            <objects>
+                <tableViewController id="w5V-um-tLW" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j39-7K-mtx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="186" id="s8v-IH-0UY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="186"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s8v-IH-0UY" id="m7Z-3n-tYc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="185.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81A-kZ-zMD">
+                                            <rect key="frame" x="0.0" y="-11" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <items>
+                                                <navigationItem title="Title" id="v2t-Pq-DyO"/>
+                                            </items>
+                                        </navigationBar>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w5V-um-tLW" id="XoK-R2-0PG"/>
+                            <outlet property="delegate" destination="w5V-um-tLW" id="avV-Vm-ETh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBr-gJ-cvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="110.19490254872565"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lap.png" width="90" height="81"/>
+        <image name="play-button-6.png" width="256" height="256"/>
+    </resources>
+</document>
